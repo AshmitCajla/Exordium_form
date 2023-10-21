@@ -1,0 +1,217 @@
+.image-container {
+    size: 10;
+    width: 10%;
+    height: 10%;
+
+}
+.background-image {
+    background-image: url('bg.png');
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+html {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  background: #4267b2;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom right, #26D0CE, #4267b2);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom right, #26D0CE, #4267b2);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+    color: #eee;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h2, h3, h4 {
+  font-family: 'Staatliches', cursive;
+  font-weight: lighter;
+  font-size: 1.5rem;
+  color: #eee;
+}
+
+p, label {
+    color: #eee;
+  font-family: 'Roboto Slab', serif;
+}
+
+#survey-form {
+  display: flex;
+  flex-flow: column;
+}
+
+.form-container {
+  grid-column-start: 2;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  border: 2px solid grey;
+  background: rgba(0,0,0,0.5);
+  border-radius: 5px;
+}
+
+.input-grid {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.input-grid > label {
+  margin: 0.5em 0;
+}
+
+.input-grid > input {
+  padding: 1em;
+  line-height: 20px;
+  outline: none;
+  width: 95%;
+  /* border-radius: 3px; */
+}
+
+.radio-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radio-buttons>* {
+  /* border: dashed 1px grey;
+    padding: 1em; */
+}
+
+.newsletter-boxes {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  justify-items: start;
+}
+
+/* CHECKBOXES */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked~.checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Style number field */
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Style dropdown */
+label {
+  margin: .5em;
+}
+
+select {
+  /* display: none; */
+  font-family: 'Staatliches', cursive;
+  font-weight: lighter;
+  font-size: 1.5rem;
+  height: 2rem;
+  width: 100%;
+  color: #4a4a4a;
+}
+
+/* Style textarea */
+textarea {
+  width: 100%;
+  height: 100px;
+  border: 3px dashed grey;
+  font-family: 'Roboto Slab', serif;
+  resize: none;
+  font-size: 1rem;
+}
+
+/* Style button */
+#submit {
+  height: 2rem;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 00 #4d73bf;
+  background: #4267b2;
+  border: #4267b2 1px solid;
+  color: white;
+  text-shadow: 0 1px 0 #3359a5;
+  margin: .5rem auto;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  /* font-family: 'Roboto Slab', serif; */
+}
